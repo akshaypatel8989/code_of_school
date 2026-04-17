@@ -650,656 +650,531 @@ nav {
     }
 }
 
-/* -----------------SECTION-ONE-HOME----------------- */
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* FOOTER */
-
-/* FOOTER */
-.footer-partone {
-    width: 100%;
-    /* height: 100%; removed fixed height for responsiveness */
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    padding: 45px;
-    /* Will adjust for smaller screens */
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    /* Allows columns to wrap to the next line */
-    gap: 20px;
-    /* Adds space between wrapped items */
+:root {
+  --ft-bg:        #050508;
+  --ft-surface:   #0e0e14;
+  --ft-border:    rgba(255,255,255,.07);
+  --ft-border2:   rgba(255,255,255,.04);
+  --ft-orange:    #ff933a;
+  --ft-orange-l:  #f39b05;
+  --ft-orange-glow: rgba(255,107,26,.18);
+  --ft-purple:    #6e49b8;
+  --ft-purple-glow: rgba(110,73,184,.15);
+  --ft-white:     #f69415;
+  --ft-muted:     rgba(254, 254, 255, 0.979);
+  --ft-dim:       rgba(240,240,245,.28);
 }
 
-/* FOOTER FIRST SECTION INFORAG */
+/* ── Footer shell ─────────────────────────────────────────────────── */
+footer {
+  background: var(--ft-bg);
+  position: relative;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Top glowing border line */
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--ft-purple) 25%,
+    var(--ft-orange) 50%,
+    var(--ft-purple) 75%,
+    transparent 100%);
+}
+
+/* Ambient glow blobs */
+footer::after {
+  content: '';
+  position: absolute;
+  top: -120px; left: -120px;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--ft-purple-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+.footer-contact::before {
+  content: '';
+  position: absolute;
+  bottom: 0; right: -80px;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--ft-orange-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Main grid ────────────────────────────────────────────────────── */
+.footer-partone {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.5fr 1.3fr;
+  gap: 0;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 4rem 3rem 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Dividers between columns */
+.footer-partone > div {
+  padding: 0 1rem;
+  position: relative;
+}
+.footer-partone > div + div::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 10%; bottom: 10%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, var(--ft-border), transparent);
+}
+
+/* ── Brand column ─────────────────────────────────────────────────── */
 .footer-inforag {
-    width: 30%;
-    /* Will adjust */
-    /* justify-content: space-between; This is for flex containers, not direct content. */
+  padding-left: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 .footer-image {
-    padding-bottom: 25px;
+  margin-bottom: .25rem;
 }
-
 .footer-image img {
-    width: 65%;
-    /* Will adjust */
-    height: auto;
-    /* Ensure image scales proportionally */
-    display: block;
-    /* Removes extra space below image */
-}
-
-.footer-dis {
-    font-size: 17px;
-    font-weight: 550;
-    color: white;
-    padding-bottom: 25px;
-    line-height: 1.6;
-    /* Improve readability */
-}
-
-.footer-logo svg {
-    color: white;
-    margin-right: 13px;
-    font-size: 24px;
-    /* Default size for social icons */
-}
-
-/* FOOTER QUICKLINKS */
-.footer-quicklink {
-    width: 15%;
-    /* Will adjust */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.footer-quicklink ul {
-    margin-top: none !important;
-}
-
-.footer-quicklink a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    /* Make the whole link clickable */
-}
-
-.footer-quicklink a:hover {
-    color: rgb(243, 147, 29);;
-    transition: color 0.3s ease;
-}
-
-#heading {
-    font-size: 19px;
-    font-family: sans-serif;
-    color: white;
-    padding-bottom: 25px;
-    white-space: nowrap;
-    /* Prevents heading from wrapping unless explicitly forced */
-}
-
-.footer-quicklink li {
-    display: flex;
-    /* Keep display flex for icon/text alignment if desired */
-    font-size: 16px;
-    font-weight: 700;
-    color: white;
-    /* Redundant if a is styled */
-    padding-bottom: 20px;
-    font-family: sans-serif;
-    /* text-decoration: none; This is on the a tag */
-}
-
-.footer-login-btn {
-    display: flex !important;
-    justify-content: start !important;
-    height: 25%;
-    align-items: center;
-}
-
-.footer-login-btn a {
-    display: flex !important;
-    justify-content: start !important;
-    height: 25%;
-    width: 80%;
-    align-items: center;
-}
-
-.footer-login-btn button {
-    display: flex;
-    justify-content: center;
-    background-color: blueviolet;
-    padding: 20px 25px;
-    color: white;
-    font-size: 18px;
-    border: none;
-    border-radius: 35px;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: all 0.3s ease;
-    width: 90%;
-}
-
-.footer-login-btn button:hover {
-    background: linear-gradient(180deg, rgba(211, 231, 232, 1) 0%, rgba(216, 216, 232, 1) 51%, rgba(227, 216, 216, 1) 100%);
-    padding: 22px 27px;
-    color: blue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.footer-quicklink li:hover {
-    color: rgb(211, 105, 12);
-    /* Applied to li directly, but a:hover is more specific */
-    transition: color 0.3s ease;
-}
-
-/* FOOTER SERVICES */
-.footer-service {
-    width: 20%;
-    /* Will adjust */
-}
-
-#heading-two {
-    font-size: 19px;
-    font-family: sans-serif;
-    color: white;
-    padding-bottom: 25px;
-    white-space: nowrap;
-}
-
-.footer-service li {
-    display: flex;
-    font-size: 16px;
-    font-weight: 700;
-    color: white;
-    padding-bottom: 16px;
-    font-family: sans-serif;
-    text-decoration: none;
-    /* Redundant if a is styled */
-}
-
-.footer-service a {
-    /* Add a style for service links */
-    text-decoration: none;
-    color: white;
-    display: block;
-}
-
-.footer-service a:hover {
-
-    color: rgb(243, 147, 29);;
-    transition: color 0.3s ease;
+    /* width: 50%; */
+    width:  135px;
+  height:auto;
+  object-fit: contain;
+  filter: brightness(1.05);
 }
 
 
-/* FOOTER CONTACTS */
+
+/* Tagline beneath logo */
+.footer-inforag::after {
+  content: 'A VENTURE OF INFORAG TECHNOLOGY';
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--ft-dim);
+  margin-top: -.75rem;
+}
+
+.footer-dis p {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--ft-muted);
+  max-width: 290px;
+}
+
+/* Social icons row */
+.footer-logo {
+  display: flex;
+  gap: .55rem;
+  flex-wrap: wrap;
+}
+.footer-logo a {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  background: var(--ft-surface);
+  border: 1px solid var(--ft-border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ft-muted);
+  transition: all .22s ease;
+  position: relative;
+  overflow: hidden;
+}
+.footer-logo a::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, var(--ft-orange-glow), var(--ft-purple-glow));
+  opacity: 0;
+  transition: opacity .22s;
+}
+.footer-logo a:hover {
+  border-color: var(--ft-orange);
+  color: var(--ft-orange);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px var(--ft-orange-glow);
+}
+.footer-logo a:hover::before { opacity: 1; }
+.footer-logo a svg { position: relative; z-index: 1; }
+
+/* ── Heading style (shared) ───────────────────────────────────────── */
+.footer-quicklink h3,
+#heading,
+#heading-two,
+#heading-three,
+.footer-service h3,
+.footer-contact h3 {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color:white !important;
+  margin-bottom: 1.25rem !important;
+  padding-bottom: .6rem;
+  border-bottom: 1px solid var(--ft-border);
+  position: relative;
+}
+/* Orange underline accent on heading */
+.footer-quicklink h3::after,
+#heading::after,
+#heading-two::after,
+#heading-three::after,
+.footer-service h3::after,
+.footer-contact h3::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0;
+  width: 32px; height: 2px;
+  background: var(--ft-orange);
+  border-radius: 2px;
+}
+
+/* Sub-headings (Legal & Info) */
+.footer-quicklink li h3 {
+  font-size: 13px !important;
+  letter-spacing: 1.5px;
+  color: var(--ft-dim) !important;
+  margin-top: 1rem !important;
+  margin-bottom: .6rem !important;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.footer-quicklink li h3::after { display: none; }
+
+/* ── Link lists ───────────────────────────────────────────────────── */
+.footer-quicklink ul,
+.footer-service ul {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+.footer-quicklink li a,
+.footer-service li a {
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--ft-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .3rem 0;
+  transition: color .18s, gap .18s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.footer-quicklink li a::before,
+.footer-service li a::before {
+  content: '›';
+  color: var(--ft-orange);
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all .18s;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.footer-quicklink li a:hover,
+.footer-service li a:hover {
+  color: var(--ft-orange-l);
+  gap: .65rem;
+}
+.footer-quicklink li a:hover::before,
+.footer-service li a:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Contact column ───────────────────────────────────────────────── */
 .footer-contact {
-    width: 27%;
-    /* Will adjust */
+  position: relative;
 }
-
-#heading-three {
-    font-size: 19px;
-    font-family: sans-serif;
-    color: white;
-    padding-bottom: 25px;
-    white-space: nowrap;
-}
-
 .footer-contact-loc,
 .footer-contact-phoneno,
 .footer-contact-mail,
 .footer-contact-time {
-    display: flex;
-    padding-bottom: 14px;
-    align-items: flex-start;
-    /* Align icon to top if text wraps */
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  padding: .7rem 0;
+  border-bottom: 1px solid var(--ft-border2);
 }
+.footer-contact-loc:last-of-type,
+.footer-contact-time { border-bottom: none; }
 
+/* Icon containers */
 .footer-contact-logo {
-    margin-right: 13px;
-    padding-top: 5px;
-    /* Aligns icon with text */
-    color: white;
-    font-size: 18px;
-    /* Consistent icon size */
-    flex-shrink: 0;
-    /* Prevent icon from shrinking */
-}
-
-.footer-contact-location a,
-.contact-no a,
-.mail-add a {
-    text-decoration: none;
-    font-size: 16px;
-    font-family: sans-serif;
-    color: white;
-    display: block;
-    /* Make links block level to fill space */
-    line-height: 1.4;
-    /* Improve readability for contact text */
-}
-
-.footer-contact-location a:hover,
-.contact-no a:hover,
-.mail-add a:hover {
-    color: rgb(243, 147, 29);
-    transition: color 0.3s ease;
-}
-
-.contact-no li,
-.mail-add li,
-.office li {
-    list-style-type: none;
-    /* Remove default list bullets */
-    padding-bottom: 3px;
-    font-size: 16px;
-    font-family: sans-serif;
-    color: white;
-    /* Redundant if a is styled */
-}
-
-/* FOOTER-PARTTWO (Copyright/Bottom Bar) */
-.footer-parttwo {
-    display: flex;
-    padding: 30px;
-    /* Will adjust */
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-top: solid white 0.5px;
-    font-size: 15px;
-    /* Default font size for copyright */
-    text-align: center;
-    /* Ensure text is centered */
-}
-
-.footer-parttwo a {
-    color: white;
-    text-decoration: none;
-
-}
-
-
-/* --------------------------------------------------- */
-/* RESPONSIVE STYLES (MEDIA QUERIES)                   */
-/* --------------------------------------------------- */
-
-/* Tablets and smaller desktops (max-width: 1024px) */
-@media (max-width: 1024px) {
-    .footer-partone {
-        padding: 60px;
-        /* Reduce padding */
-        gap: 40px;
-        /* Increase gap between columns */
-    }
-
-    /* Adjust widths for 2 columns or 3 if space allows */
-    .footer-inforag {
-        width: 45%;
-        /* Two columns per row */
-    }
-
-    .footer-quicklink,
-    .footer-service,
-    .footer-contact {
-        width: 45%;
-        /* Two columns per row */
-    }
-
-    .footer-image img {
-        width: 80%;
-        /* Make image larger within its column */
-    }
-
-    .footer-dis {
-        font-size: 16px;
-    }
-
-    #heading,
-    #heading-two,
-    #heading-three {
-        font-size: 18px;
-        /* Slightly smaller headings */
-        padding-bottom: 20px;
-    }
-
-    .footer-quicklink li,
-    .footer-service li,
-    .footer-contact-location a,
-    .contact-no li,
-    .mail-add li,
-    .office li {
-        font-size: 15px;
-        /* Slightly smaller link text */
-        padding-bottom: 15px;
-    }
-
-    .footer-logo svg {
-        font-size: 22px;
-        /* Smaller social icons */
-    }
-
-    .footer-contact-logo {
-        font-size: 16px;
-        /* Smaller contact icons */
-    }
-
-    .footer-parttwo {
-        padding: 25px;
-        font-size: 14px;
-    }
-}
-
-/* Mobile devices (max-width: 768px) */
-@media (max-width: 768px) {
-    .footer-partone {
-        padding: 40px 20px;
-        /* Further reduce padding */
-        flex-wrap: wrap;
-        /* Stack all columns vertically */
-        align-items: center;
-        /* Center items when stacked */
-        gap: 30px;
-        /* Space between stacked sections */
-    }
-
-    .footer-login-btn {
-        display: flex !important;
-        justify-content: center !important;
-
-    }
-
-    .footer-inforag,
-    .footer-quicklink,
-    .footer-service,
-    .footer-contact {
-        width: 100%;
-        /* Each column takes almost full width */
-        text-align: left;
-        /* Center text within columns */
-        padding: 10px;
-        /* Remove column-specific padding, use section padding */
-    }
-
-    /* Adjust specific elements to be centered for mobile */
-    .footer-image {
-        padding-bottom: 15px;
-    }
-
-    .footer-image img {
-        width: 60%;
-        /* Adjust image size for mobile */
-        max-width: 200px;
-        /* Prevent image from becoming too large */
-        margin: 0 auto;
-        /* Center the image */
-    }
-
-    .footer-dis {
-        font-size: 15px;
-        padding-bottom: 15px;
-    }
-
-    .footer-login-btn a {
-        display: none !important;
-    }
-
-    .footer-logo {
-        text-align: left;
-        /* Center social icons */
-        margin-top: 10px;
-    }
-
-    .footer-logo svg {
-        font-size: 20px;
-        margin: 0 8px;
-        /* Adjust margin between icons */
-    }
-
-    #heading,
-    #heading-two,
-    #heading-three {
-        font-size: 17px;
-        /* Smaller headings */
-        padding-bottom: 15px;
-        white-space: normal;
-        /* Allow headings to wrap if needed */
-    }
-
-    /* Center list items for quicklinks/services */
-    .footer-quicklink ul,
-    .footer-service ul {
-        list-style: none;
-        /* Ensure no bullets if padding is messed up */
-        padding: 0;
-    }
-
-    .footer-quicklink li,
-    .footer-service li {
-        justify-content: left;
-        /* Center list items if they contain text only */
-        font-size: 14px;
-        padding-bottom: 12px;
-    }
-
-    /* Contact info adjustments */
-    .footer-contact-loc,
-    .footer-contact-phoneno,
-    .footer-contact-mail,
-    .footer-contact-time {
-        justify-content: left;
-        /* Center the icon+text block */
-        flex-direction: row;
-        /* Keep icon and text side-by-side */
-        align-items: flex-start;
-        /* Align icon to top */
-        padding-bottom: 15px;
-        text-align: left;
-        /* Text itself remains left-aligned relative to icon */
-    }
-
-    .footer-contact-logo {
-        margin-right: 10px;
-        padding-top: 2px;
-        /* Smaller padding for icon alignment */
-        font-size: 15px;
-        /* Smaller icons */
-    }
-
-    .footer-contact-location a,
-    .contact-no a,
-    .mail-add a,
-    .office li {
-        font-size: 14px;
-        text-align: left;
-        /* Ensures text is left aligned within its area */
-    }
-
-    .footer-parttwo {
-        padding: 20px;
-        font-size: 13px;
-    }
-}
-
-/* Extra small mobile devices (max-width: 480px) */
-@media (max-width: 480px) {
-    .edit-right {
-        flex-direction: column;
-    }
-
-    .gallery-right-content {
-        width: 100%;
-    }
-
-    #fourth-section-part-three-head {
-        font-size: 32px;
-    }
-
-    .fourth-section-content {
-        padding: 0;
-    }
-
-    .fourth-section-part-three {
-        width: 100%;
-    }
-
-    .footer-partone {
-        padding: 30px 15px;
-        /* Smallest padding */
-        gap: 25px;
-        /* Smaller gap */
-    }
-
-    .footer-inforag,
-    .footer-quicklink,
-    .footer-service,
-    .footer-contact {
-        width: 95%;
-        /* Take maximum width */
-    }
-
-    .footer-image img {
-        width: 50%;
-        max-width: 150px;
-    }
-
-    .footer-dis {
-        font-size: 14px;
-        padding-bottom: 10px;
-    }
-
-    .footer-logo svg {
-        font-size: 18px;
-        margin: 0 6px;
-    }
-
-    #heading,
-    #heading-two,
-    #heading-three {
-        font-size: 16px;
-        padding-bottom: 10px;
-    }
-
-    .footer-quicklink li,
-    .footer-service li {
-        font-size: 13px;
-        padding-bottom: 10px;
-    }
-
-    .footer-contact-loc,
-    .footer-contact-phoneno,
-    .footer-contact-mail,
-    .footer-contact-time {
-        padding-bottom: 10px;
-    }
-
-    .footer-contact-logo {
-        margin-right: 8px;
-        font-size: 14px;
-    }
-
-    .footer-contact-location a,
-    .contact-no a,
-    .mail-add a,
-    .office li {
-        font-size: 13px;
-    }
-
-    .footer-parttwo {
-        padding: 15px;
-        font-size: 12px;
-    }
-}
-.mobile-courses-dropdown {
-  max-height: 80vh;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  background-color: black;
-}
-
-.back-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background-color:transparent; /* light background */
-  color: #f9f8f8; /* text color */
-  border: none;
+  width: 30px; height: 30px;
   border-radius: 8px;
-  padding: 8px 14px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-bottom: 7px;
+  background: var(--ft-surface);
+  border: 1px solid var(--ft-border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ft-orange);
+  flex-shrink: 0;
+  transition: all .2s;
+}
+.footer-contact-loc:hover .footer-contact-logo,
+.footer-contact-phoneno:hover .footer-contact-logo,
+.footer-contact-mail:hover .footer-contact-logo,
+.footer-contact-time:hover .footer-contact-logo {
+  background: var(--ft-orange-glow);
+  border-color: rgba(255,107,26,.35);
 }
 
-/* Optional hover effect */
-.back-btn:hover {
-  background-color: #87a6c7; /* blue hover */
-  color: #2a2929;
+/* Location text */
+.footer-contact-location a {
+  font-size: 12.5px;
+  color: var(--ft-muted);
+  line-height: 1.75;
+  transition: color .18s;
+  text-decoration: none;
+
+}
+.footer-contact-location a:hover { color: var(--ft-white); }
+.footer-contact-location a b { color: var(--ft-white); font-weight: 600; }
+
+/* Phone / mail / time */
+.contact-no ul,
+.mail-add ul,
+.office ul { list-style: none; padding: 0; margin: 8px 0px; }
+
+.contact-no ul li a,
+.mail-add ul li a {
+  font-size: 13px;
+  color: var(--ft-muted);
+  display: block;
+  padding: .1rem 0;
+  transition: color .18s;
+  text-decoration: none;
+}
+.contact-no ul li a:hover,
+.mail-add ul li a:hover { color: var(--ft-orange-l); }
+
+.office ul li {
+  font-size: 12.5px;
+  color: var(--ft-muted);
+  padding: .1rem 0;
+  line-height: 1.7;
 }
 
-/* Add small arrow for aesthetic */
-.back-btn::before {
-  content: "←";
-  font-weight: bold;
-  font-size: 16px;
-  margin-right: 4px;
+/* ═══════════════════════════════════════════════════════════════════
+   FOOTER-OFFER BAND
+   ═══════════════════════════════════════════════════════════════════ */
+.footer-offer {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 1.5rem 3rem;
+  border-top: 1px solid var(--ft-border);
+  border-bottom: 1px solid var(--ft-border);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+  position: relative;
+  z-index: 1;
 }
 
+.footer-coures h4 {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ft-orange) !important;
+  margin-bottom: .6rem;
+}
+.footer-coures p,
+.footer-coures a p {
+  font-size: 12.5px;
+  color: var(--ft-muted);
+  line-height: 1.7;
+  margin: .25rem 0;
+  transition: color .18s;
+}
+.footer-coures a:hover p { color: #f69415; }
+.coures-location{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 1.5rem 3rem;
+}
 
+.coures-location h4 {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ft-orange) !important;
+  margin-bottom: .6rem;
+}
+.coures-location p {
+  font-size: 13px;
+  color:white;
+  line-height: 1.9;
+  word-spacing: 2px;
+}
+.coures-location p a{
+    color:white;
+    text-decoration: none;
+}
 
+.coures-location p a:hover{
+    color: #f69415;;
+   
+}
+@media (max-width : 769px){
+    .coures-location{
+    /* max-width: 1320px;
+    margin: 0 auto; */
+    padding: 1.5rem 1rem;
+}
+}
 
+/* ═══════════════════════════════════════════════════════════════════
+   COPYRIGHT BAR
+   ═══════════════════════════════════════════════════════════════════ */
+.footer-parttwo {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .75rem;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.footer-parttwo h3 {
+  font-size: 12.5px !important;
+  font-weight: 400 !important;
+  color:rgb(146, 142, 142) !important;
+}
+.footer-parttwo a {
+  color:white;
+  font-weight: 600;
+  transition: color .18s;
+}
+.footer-parttwo a:hover { color: var(--ft-orange-l); }
 
+/* "Made with  in India" badge */
+/* .footer-parttwo::after {
+  content: 'Made with  in India';
+  font-size: 11px;
+  color: var(--ft-dim);
+  letter-spacing: .5px;
+} */
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .footer-partone { grid-template-columns: 1fr 1fr; gap: 0; row-gap: 2.5rem; }
+  .footer-partone > div:nth-child(odd) { padding-left: 0; }
+  .footer-partone > div:nth-child(2)::before { display: none; }
+  .footer-partone > div:nth-child(3)::before { display: none; }
+  .footer-offer { grid-template-columns: 1fr; gap: 1rem; }
+}
+@media (max-width: 768px) {
+  .footer-partone { grid-template-columns: 1fr; padding: 2.5rem 1.25rem 2rem; gap: 2rem; }
+  .footer-partone > div { padding: 0 !important; }
+  .footer-partone > div::before { display: none !important; }
+  .footer-offer { padding: 1.25rem; }
+  .footer-parttwo { padding: 1rem 1.25rem; flex-direction: column; text-align: center; }
+  .footer-parttwo::after { width: 100%; text-align: center; }
+    .footer-image{display: flex;justify-content: center;}
+}
+@media (max-width: 480px) {
+  .footer-logo a { width: 34px; height: 34px; border-radius: 8px; }
+
+  .footer-image img { height: 100px;width: 100%; }
+}
+.footer-coures a{
+    display:inline-block
+  
+}
+.phone-list {
+  display: flex;
+  gap: 10px; /* space between numbers */
+  list-style: none;
+  padding: 0;
+}
+/* .footer-offer{
+    display: grid;
+    grid-template-columns: 1.7fr 0.6fr;
+} */
+.footer-coures{
+    /* display: grid;
+    grid-template-columns: 1fr; */
+}
+.footer-coures-left {
+    display: flex;
+    flex-direction:row;
+    width: auto;
+    /* gap: 10px; */
+}
+.footer-coures-left {
+  display: flex;
+  flex-wrap: wrap;   /* responsive */
+  gap:1px;         /* space between items */
+}
+
+.footer-coures-left a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  /* background: rgba(255,255,255,0.05); */
+  padding:0px 1px;
+  /* border-radius: 5px; */
+}
+ 
+          /* -------footer---------- */
+ .footer-courses {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            /* responsive */
+        }
+
+        .footer-left,
+        .footer-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-courses a {
+            text-decoration: none;
+             /* display: inline-block; */
+            color: #fff;
+            font-size: 14px;
+        }
+        .footer-left h4,
+        .footer-right h4{
+            color: #f69415;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+  .footer-courses {
+    flex-direction: column;
+  }
+}
+.footer-hr{
+    color: #888686;
+}

@@ -27,225 +27,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-<style>
-/* ── City page extra styles ─────────────────────────── */
-.city-hero {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0f172a 100%);
-    padding: 7rem 2rem 4rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-.city-hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(ellipse 55% 50% at 20% 60%, rgba(99,102,241,.15) 0%, transparent 65%),
-        radial-gradient(ellipse 45% 45% at 80% 35%, rgba(245,158,11,.1) 0%, transparent 60%);
-    pointer-events: none;
-}
-.city-hero-inner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
-.city-tag {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: .35rem 1rem;
-    border: 1px solid rgba(99,102,241,.4);
-    border-radius: 20px; font-size: 12px; font-weight: 600;
-    color: #818cf8; letter-spacing: .5px; margin-bottom: 1.25rem;
-    background: rgba(99,102,241,.08);
-}
-.city-tag::before {
-    content: ''; width: 6px; height: 6px; border-radius: 50%;
-    background: #818cf8; flex-shrink: 0;
-    animation: cpulse 2s infinite;
-}
-@keyframes cpulse { 0%,100%{opacity:1} 50%{opacity:.3} }
-.city-hero h1 {
-    font-size: clamp(28px, 5vw, 54px);
-    font-weight: 800; line-height: 1.1; letter-spacing: -1.5px;
-    color: #f1f5f9; margin-bottom: 1.25rem;
-}
-.city-hero h1 span {   font-style: normal;
-    background: linear-gradient(135deg, #fcd34d, #f97316);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
-.city-hero p {
-    font-size: 16px; color: rgba(241,245,249,.6);
-    line-height: 1.8; max-width: 640px; margin: 0 auto 2rem;
-}
-.city-hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-.city-hero-btns .btn-primary {
-    padding: .8rem 2rem; background: #f59e0b; color: #0f172a;
-    border-radius: 7px; font-weight: 700; font-size: 15px;
-    border: none; cursor: pointer; transition: all .2s;
-    box-shadow: 0 6px 20px rgba(245,158,11,.35);
-}
-.city-hero-btns .btn-primary:hover { background: #fbbf24; transform: translateY(-2px); }
-.city-hero-btns .btn-outline {
-    padding: .8rem 2rem;
-    border: 1.5px solid rgba(255,255,255,.2); color: #f1f5f9;
-    border-radius: 7px; font-weight: 500; font-size: 15px;
-    background: transparent; cursor: pointer; transition: all .2s;
-}
-.city-hero-btns .btn-outline:hover { border-color: #f59e0b; color: #f59e0b; }
 
-/* ── Stats bar ───────────────────────────────────────── */
-.city-stats {
-    display: flex; justify-content: center; gap: 0;
-    background: #1e293b;
-    border-top: 1px solid rgba(255,255,255,.07);
-    border-bottom: 1px solid rgba(255,255,255,.07);
-    flex-wrap: wrap;
-}
-.city-stat-item {
-    flex: 1; min-width: 150px; padding: 1.5rem 1rem;
-    text-align: center;
-    border-right: 1px solid rgba(255,255,255,.07);
-}
-.city-stat-item:last-child { border-right: none; }
-.city-stat-item strong {
-    display: block; font-size: 28px; font-weight: 800;
-    color: #f59e0b; line-height: 1;
-}
-.city-stat-item span { font-size: 12px; color: rgba(241,245,249,.5); text-transform: uppercase; letter-spacing: .5px; }
-
-/* ── Why section ─────────────────────────────────────── */
-.city-why {
-    background: #0f172a; padding: 5rem 2rem;
-}
-.city-why-inner { max-width: 1100px; margin: 0 auto; }
-.city-section-tag {
-    font-size: 11px; font-weight: 700; letter-spacing: 2px;
-    text-transform: uppercase; color: #f59e0b; display: block; margin-bottom: .75rem;
-}
-.city-why h2 {
-    font-size: clamp(24px, 3.5vw, 40px); font-weight: 800;
-    color: #f1f5f9; letter-spacing: -1px; margin-bottom: .75rem;
-}
-.city-why h2 span {  background: linear-gradient(135deg, #fcd34d, #f97316);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent }
-.city-why > .city-why-inner > p { color: rgba(241,245,249,.55); font-size: 15px; line-height: 1.8; max-width: 600px; margin-bottom: 3rem; }
-.why-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.25rem;
-}
-.why-card {
-    background: #1e293b; border: 1px solid rgba(255,255,255,.07);
-    border-radius: 14px; padding: 1.5rem;
-    transition: border-color .25s, transform .25s;
-}
-.why-card:hover { border-color: rgba(245,158,11,.4); transform: translateY(-3px); }
-.why-icon { font-size: 26px; margin-bottom: .75rem; }
-.why-card h4 { font-size: 15px; font-weight: 700; color: #f1f5f9; margin-bottom: .4rem; }
-.why-card p { font-size: 13px; color: rgba(241,245,249,.5); line-height: 1.6; }
-
-/* ── Courses section ─────────────────────────────────── */
-.city-courses {
-    background: #0f172a; padding: 5rem 2rem;
-    border-top: 1px solid rgba(255,255,255,.05);
-}
-.city-courses-inner { max-width: 1150px; margin: 0 auto; }
-.city-courses h2 {
-    font-size: clamp(24px, 3.5vw, 40px); font-weight: 800;
-    color: #f1f5f9; letter-spacing: -1px; margin-bottom: .6rem;
-}
-.city-courses h2 span {   background: linear-gradient(135deg, #fcd34d, #f97316);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-.city-courses > .city-courses-inner > p { color: rgba(241,245,249,.5); font-size: 15px; line-height: 1.8; margin-bottom: 2.5rem; }
-.courses-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.25rem;
-}
-.course-card {
-    background: #1e293b;
-    border: 1px solid rgba(255,255,255,.07);
-    border-radius: 14px; padding: 1.6rem;
-    transition: all .25s; position: relative; overflow: hidden;
-    display: flex; flex-direction: column;
-}
-.course-card::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(245,158,11,.06), transparent);
-    opacity: 0; transition: opacity .25s;
-}
-.course-card:hover { border-color: rgba(245,158,11,.4); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.4); }
-.course-card:hover::before { opacity: 1; }
-.course-card-icon {
-    width: 48px; height: 48px; border-radius: 12px;
-    background: rgba(245,158,11,.12);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 22px; margin-bottom: 1rem;
-}
-.course-card-badge {
-    display: inline-block; font-size: 10px; font-weight: 700;
-    letter-spacing: .8px; text-transform: uppercase;
-    padding: .2rem .6rem; border-radius: 20px;
-    background: rgba(99,102,241,.18); color: #818cf8;
-    margin-bottom: .75rem;
-}
-.course-card h3 { font-size: 16px; font-weight: 700; color: #f1f5f9; margin-bottom: .5rem; line-height: 1.3; }
-.course-card p { font-size: 13px; color: rgba(241,245,249,.5); line-height: 1.65; flex: 1; margin-bottom: 1.25rem; }
-.course-card-link {
-    display: inline-flex; align-items: center; gap: .4rem;
-    font-size: 13px; font-weight: 600; color: #f59e0b;
-    transition: gap .2s; text-decoration: none;
-}
-.course-card-link:hover { gap: .7rem; }
-
-/* ── About city section ──────────────────────────────── */
-.city-about {
-    background: #1e293b; padding: 5rem 2rem;
-    border-top: 1px solid rgba(255,255,255,.05);
-}
-.city-about-inner { max-width: 900px; margin: 0 auto; }
-.city-about h2 { font-size: clamp(22px, 3vw, 36px); font-weight: 800; color: #f1f5f9; letter-spacing: -.8px; margin-bottom: 1rem; }
-.city-about h2 span {   background: linear-gradient(135deg, #fcd34d, #f97316);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-.city-about p { font-size: 15px; color: rgba(241,245,249,.6); line-height: 1.9; margin-bottom: 1rem; }
-.city-about p span {  background: linear-gradient(135deg, #fcd34d, #f97316);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; font-weight: 600;}
-/* ── CTA band ────────────────────────────────────────── */
-.city-cta {
-    background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
-    padding: 5rem 2rem; text-align: center;
-    border-top: 1px solid rgba(99,102,241,.2);
-}
-.city-cta h2 {
-     font-size: clamp(24px, 4vw, 46px);
-     font-weight: 800; color: #f1f5f9; 
-     letter-spacing: -1px; margin-bottom: .75rem; 
-    }
-.city-cta h2 span {  
-    background: linear-gradient(135deg, #fcd34d, #f97316);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-    }
-.city-cta p { font-size: 16px; color: rgba(241,245,249,.55); max-width: 480px; margin: 0 auto 2rem; line-height: 1.8; }
-.cta-form { display: flex; gap: .75rem; max-width: 440px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
-.cta-input {
-    flex: 1; min-width: 200px; padding: .85rem 1rem;
-    background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15);
-    border-radius: 7px; color: #f1f5f9; font-size: 14px; outline: none;
-    transition: border-color .2s;
-}
-.cta-input:focus { border-color: #f59e0b; }
-.cta-input::placeholder { color: rgba(241,245,249,.35); }
-.cta-note { font-size: 12px; color: rgba(241,245,249,.35); margin-top: 1rem; }
-
-/* Responsive */
-@media(max-width:640px){
-    .city-stats { flex-direction: column;margin: 20px 30px;border-radius: 10px; }
-    .city-stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.07); }
-    .city-hero h1 { letter-spacing: -.5px; }
-    .city-hero-btns { flex-direction: column; align-items: center; }
-    .cta-form { flex-direction: column; }
-    .cta-input, .city-cta .btn-primary { width: 100%; }
-}
-</style>
 </head>
 <body>
 <div class="main">
@@ -510,6 +292,7 @@
 </div><!-- end .main -->
 
     <footer>
+    
         <div class="footer-partone">
             <div class="footer-inforag">
                 <div class="footer-image"><img src="./img/cos-white-logo.webp" alt="Code of School Logo"></div>
@@ -536,6 +319,7 @@
                 </ul>
             </div>
             <div class="footer-service">
+                <h3 id="heading-two">Our Courses</h3>
                 <ul>
                     <li><a href="./digital_marketing.html">Digital Marketing with AI</a></li>
                     <li><a href="./java_full_stack.html">Java Full Stack Development</a></li>
@@ -556,7 +340,7 @@
                 <h3 id="heading-three">Contact Us</h3>
                 <div class="footer-contact-loc">
                     <div class="footer-contact-logo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg></div>
-                    <div class="footer-contact-location"><a href="https://www.google.com/maps/place/Inforag+Technology" target="_blank"><b>Indore (Head Office):</b> Office No. 421 Fourth Floor, Shagun Tower, Rasoma Square, Vijay Nagar, Ratna Lok Colony, Indore, MP 452010</a></div>
+                    <div class="footer-contact-location"><a href="https://www.google.com/maps/place/Code+Of+School/@22.7247256,75.8354956,13z/data=!4m10!1m2!2m1!1scode+of+school+indore!3m6!1s0x3962fd45228527cb:0x7622cac56fecc69d!8m2!3d22.7495525!4d75.8956164!15sChVjb2RlIG9mIHNjaG9vbCBpbmRvcmWSARtzb2Z0d2FyZV90cmFpbmluZ19pbnN0aXR1dGXgAQA!16s%2Fg%2F11xp6pw1j6?entry=ttu&g_ep=EgoyMDI2MDQxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank"><b>Indore (Head Office):</b> Office No. 421 Fourth Floor, Shagun Tower, Rasoma Square, Vijay Nagar, Ratna Lok Colony, Indore, MP 452010</a></div>
                 </div>
                 <div class="footer-contact-phoneno">
                     <div class="footer-contact-logo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/></svg></div>
@@ -572,7 +356,7 @@
                 </div>
                 <div class="footer-contact-mail">
                     <div class="footer-contact-logo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16"><path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/></svg></div>
-                    <div class="mail-add"><ul><li><a href="mailto:info@codeofschool.com">info@codeofschool.com</a></li></ul></div>
+                    <div class="mail-add"><ul><li><a href="mailto:thecodeofschool@gmail.com">thecodeofschool@gmail.com</a></li></ul></div>
                 </div>
                 <div class="footer-contact-time">
                     <div class="footer-contact-logo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/></svg></div>
@@ -586,11 +370,49 @@
                 <a style="text-decoration:none;" href="./digital_marketing_indore.html"><p>Practical Digital Marketing Course in Indore | Online Digital Marketing Course</p></a>
                 <a style="text-decoration:none;" href="./digital_marketing_seoni_malwa.html"><p>Practical Digital Marketing Course in Seoni Malwa | Online Digital Marketing Course</p></a>
             </div>
-            <div class="coures-location">
+          </div>
+               <div class="coures-location">
                 <h4>JOIN OUR COURSES ONLINE, DESIGNED FOR YOUR CITY</h4>
-                <p>Delhi | Bhopal | Pune | Mumbai | Lucknow | Ahmedabad | Dewas | Indore | Ujjain | Harda | Mhow | Hoshangabad | Sehore | Sagar | Dhar |<br />
-                Jabalpur | Satna | Gwalior | Chennai | Udaipur | Surat | Jaipur | Chandigarh | Nagpur | Noida | Kanpur | Kota |<br />
-                Varanasi | Gurgaon | Patna | Amritsar | Thane | Agra | Srinagar | Navi Mumbai | Vadodara | Nashik |</p>
+                <p>
+                    <a href="./citys/courses_in_agra.html">Delhi</a> |
+                    <a href="./citys/courses_in_bhopal.html">Bhopal</a> |
+                    <a href="./citys/courses_in_pune.html">Pune</a> |
+                    <a href="./citys/courses_in_mumbai.html">Mumbai</a> |
+                    <a href="./citys/courses_in_lucknow.html">Lucknow</a> |
+                    <a href="./citys/courses_in_ahmedabad.html">Ahmedabad</a> |
+                    <a href="./citys/courses_in_dewas.html">Dewas</a> |
+                    <a href="./citys/courses_in_indore.html">Indore</a> |
+                    <a href="./citys/courses_in_ujjain.html">Ujjain</a> |
+                    <a href="./citys/courses_in_harda.html">Harda</a> |
+                    <a href="./citys/courses_in_mhow.html">Mhow</a> |
+                    <a href="./citys/courses_in_hoshangabad.html">Hoshangabad</a> |
+                    <a href="./citys/courses_in_sehore.html">Sehore</a> |
+                    <a href="./citys/courses_in_sagar.html">Sagar</a> |
+                    <a href="./citys/courses_in_dhar.html">Dhar</a> |<br />
+                    <a href="./citys/courses_in_jabalpur.html">Jabalpur</a> |
+                    <a href="./citys/courses_in_satna.html">Satna</a> |
+                    <a href="./citys/courses_in_gwalior.html">Gwalior</a> |
+                    <a href="./citys/courses_in_chennai.html">Chennai</a> |
+                    <a href="./citys/courses_in_udaipur.html">Udaipur</a> |
+                    <a href="./citys/courses_in_surat.html">Surat</a> |
+                    <a href="./citys/courses_in_jaipur.html">Jaipur</a> |
+                    <a href="./citys/courses_in_chandigarh.html">Chandigarh</a> |
+                    <a href="./citys/courses_in_nagpur.html">Nagpur</a> |
+                    <a href="./citys/courses_in_noida.html">Noida</a> |
+                    <a href="./citys/courses_in_kanpur.html">Kanpur</a> |
+                    <a href="./citys/courses_in_kota.html">Kota</a> |<br />
+
+                    <a href="./citys/courses_in_varanasi.html">Varanasi</a> |
+                    <a href="./citys/courses_in_gurgaon.html">Gurgaon</a> |
+                    <a href="./citys/courses_in_patna.html">Patna</a> |
+                    <a href="./citys/courses_in_amritsar.html">Amritsar</a> |
+                    <a href="./citys/courses_in_thane.html">Thane</a> |
+                    <a href="./citys/courses_in_agra.html">Agra</a> |
+                    <a href="./citys/courses_in_srinagar.html">Srinagar</a> |
+                    <a href="./citys/courses_in_navi_mumbai.html">Navi Mumbai</a> |
+                    <a href="./citys/courses_in_vadodara.html">Vadodara</a> |
+                    <a href="./citys/courses_in_nashik.html">Nashik</a>
+                </p>
             </div>
         </div>
         <div class="footer-parttwo">

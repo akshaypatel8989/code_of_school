@@ -142,7 +142,7 @@ body {
 .sec-two-left-partthree-headtwo {
     display: flex;
     width: 45%; /* Adjust width for larger screens */
-    font-size: 18px;
+    font-size: 16px;
     padding-left: 8px;
     color: white;
 }
@@ -201,7 +201,7 @@ body {
 .sec-two-left-parttwo-li {
     text-decoration: none;
     list-style: none;
-    font-size: 18px;
+    font-size: 16px;
     color: white;
 }
 
@@ -679,7 +679,7 @@ body {
    
   text-align: center;
   margin-bottom: 25px;
-  font-size: 28px;
+  font-size: 25px;
   font-weight:lighter;
   color: #e2e2e2;
     background-color: rgba(15, 15, 255, 0.5);
@@ -707,7 +707,7 @@ body {
   cursor: pointer;
   font-weight: 500;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 17px;
   margin: 15px 0;
 }
 
@@ -722,7 +722,7 @@ body {
   margin-top: 10px;
   color: #ffffff;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /* Icon */
@@ -790,52 +790,6 @@ body {
 
 
 /* footer courses and city */
-
-
-.footer-offer{
-    margin: 0px 40px;
-   
-}
-.footer-coures{
-    margin: 25px auto;
-}
-.footer-coures h4{
-    margin: 10px auto;
-    color: rgb(226, 139, 18);
-    font-size: medium;
-}
-.footer-coures p{
-
-    color: #fafafa;
-    margin: 10px auto;
-}
-.coures-location h4{
-    margin: 15px auto;
-    color: rgb(232, 131, 8);
-    font-size: medium;
-}
-.coures-location p{
-    color: #f9f8f8;
-    margin: 15px auto;
-    word-spacing:2px;
-    font-size:16px;
-}
-
-.coures-location{
-    margin: 25px auto;
-}
-@media (max-width:768px){
-    .footer-coures h4{
-    
-    font-size:medium;
-}
-.coures-location h4{
-  
-    font-size:medium;
-}
-
-}
-
 
 
 /* ── Reset & Variables ──────────────────────────────────────────────────── */
@@ -1043,7 +997,7 @@ img   { max-width: 100%; display: block; border-radius: 10px; }
   width: 91%;
 }
 .section-card h2 {
-  font-family: ;
+  /* font-family: ; */
   font-size: 21px;
   font-weight: 800;
   letter-spacing: -.3px;
@@ -1227,7 +1181,7 @@ img   { max-width: 100%; display: block; border-radius: 10px; }
  .coures-location h4,
  .footer-coures h4{
                 font-style: normal;
-    background: linear-gradient(135deg, #fcd34d, #f97316);
+    background: linear-gradient(135deg, #df9a1b, #f97316);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
         }
@@ -1402,7 +1356,7 @@ img   { max-width: 100%; display: block; border-radius: 10px; }
 /* TITLE */
 .cert-title {
   color: white;
-  font-size: 40px;
+  font-size: 36px;
   margin-bottom: 40px;
   letter-spacing: 2px;
 }
@@ -1461,7 +1415,7 @@ img   { max-width: 100%; display: block; border-radius: 10px; }
   }
 
   .cert-title {
-    font-size: 28px;
+    font-size: 21px;
   }
 }
 
@@ -1492,11 +1446,14 @@ img   { max-width: 100%; display: block; border-radius: 10px; }
   font-weight: bold;
 }
 
-.left h1 {
-  font-size: 38px;
+.sec-two-left-partone-headthree {
+  font-size: 24px;
   color: #f4f2f2;
   margin: 20px 0;
   line-height: 1.2;
+}
+.sec-two-left-partthree-headone{
+  font-size:38px;
 }
 
 .highlight {

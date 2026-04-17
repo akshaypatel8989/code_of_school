@@ -10,7 +10,7 @@
 .main {
     width: 100%;
     /* Use 100% for full viewport width */
-    background-color: black;
+    background-color: black !important;
     overflow-x: hidden;
 }
 
@@ -1863,50 +1863,42 @@ body {
 }
 
 
-/* footer courses and city */
-
-
-.footer-offer{
-    margin: 0px 40px;
-   
-}
-.footer-coures{
-    margin: 25px auto;
-}
-.footer-coures h4{
-    margin: 10px auto;
-    color: rgb(226, 139, 18);
-    font-size: medium;
-}
-.footer-coures p{
-
-    color: #fafafa;
-    margin: 10px auto;
-}
-.coures-location h4{
-    margin: 15px auto;
-    color: rgb(232, 131, 8);
-    font-size: medium;
-}
-.coures-location p{
-    color: #f9f8f8;
-    margin: 15px auto;
-    word-spacing:2px;
-    font-size:16px;
+footer {
+  background:#000000 !important;
+  position: relative;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
 }
 
-.coures-location{
-    margin: 25px auto;
+.footer-parttw {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .75rem;
+  position: relative;
+  z-index: 1;
+  text-align: center;
 }
-@media (max-width:768px){
-    .footer-coures h4{
-    
-    font-size:medium;
+.footer-parttw h3 {
+  font-size: 12.5px !important;
+  font-weight: 400 !important;
+  color:rgb(146, 142, 142) !important;
 }
-.coures-location h4{
-  
-    font-size:medium;
+.footer-parttw a {
+  color:white;
+  font-weight: 600;
+  transition: color .18s;
 }
+.footer-parttw a:hover { color: var(--ft-orange-l); }
 
+.footer-hr{
+     color: 4px solid #d6d6d6 !important; 
+}
+.footer-left h4{
+ font-size: 17px;
 }
 

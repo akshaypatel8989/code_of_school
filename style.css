@@ -400,7 +400,7 @@ body {
     display: flex;
     justify-content: center;
     font-size: 16px;
-    width: 80%;
+    width: 100%;
     text-align: center;
     color: white;
     padding: 20px 0px 10px 0px;
@@ -478,6 +478,15 @@ body {
 
 /* --- Media Queries for Hero Section (Section One) --- */
 @media (max-width: 768px) {
+    .gallery-right-content {
+    padding: 25px 25px 25px 25px;
+    border: rgb(128, 127, 215) solid 1px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    width: 100%;
+    /* height: 24%; */
+    cursor: pointer;
+}
     .hero-section {
         padding-top: 50px;
         /* Less padding on smaller screens */
@@ -605,6 +614,9 @@ body {
 }
 
 @media (max-width: 768px) {
+    .edit-right {
+   display: inline-block;
+}
     #section-two-head-one {
         padding: 50px 20px;
         font-size: 25px;
@@ -672,6 +684,10 @@ body {
 }
 
 @media (max-width: 480px) {
+     .edit-right {
+
+    display:inline-block;
+}
     #section-two-head-one {
         font-size: 20px;
         padding: 30px 15px;
@@ -1033,7 +1049,7 @@ body {
 
 /* footer courses and city */
 
-
+/* 
 .footer-offer{
     margin: 0px 40px;
    
@@ -1078,4 +1094,29 @@ body {
     font-size:medium;
 }
 
-}
+} */
+ .location{
+   
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px auto;
+
+ }
+ .location-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+ }
+    .location-image img{
+        
+        width: 80%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }

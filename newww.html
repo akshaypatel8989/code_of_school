@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Offices</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+  margin: 0;
+  
+}
+
+.office-section {
+  text-align: center;
+  padding: 50px 20px;
+  color: rgb(231, 227, 227);
+}
+
+.subtitle {
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+ margin: 0px 20px;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* CARD BASE */
+.card {
+  flex: 1;
+    display: flex;
+  flex-direction: column;
+  width: 80%;
+  height:550px ; 
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(81, 53, 53, 0.05);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 327px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 10px 0;
+  
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  border: 2px solid;
+  transition: 0.3s;
+}
+
+/* NEON COLORS */
+.pink {
+  border: 2px solid #e342c3;
+  box-shadow: 0 0 15px #e027bb;
+}
+.pink button {
+  border-color: #db36ba;
+}
+.pink:hover {
+  box-shadow: 0 0 30px #ff00cc;
+}
+
+.blue {
+  border: 2px solid #78c6cd;
+  box-shadow: 0 0 15px #40c5d2;
+}
+.blue button {
+  border-color: #00eaff;
+}
+.blue:hover {
+  box-shadow: 0 0 30px #3cc3d0;
+}
+
+.yellow {
+  border: 2px solid #c2a532;
+  box-shadow: 0 0 15px #d8b529;
+}
+.yellow button {
+  border-color: #c8a92d;
+}
+.yellow:hover {
+  box-shadow: 0 0 30px #e4ba14;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card  h3{
+ font-size: 16px;
+ margin: 0px 10px;
+ padding: 0px 10px;
+ font-style:italic;
+ font-weight: 400;
+}
+.card p{
+ font-size:14px;
+ font-weight: 100;
+ color: #c8c8c8;
+
+}
+
+
+.img {
+  position: relative;
+  border: 2px solid #00eaff; /* top, left, right */
+  border-bottom: none; /* remove bottom border */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.img-box img {
+  width: 100%;
+
+  display: block;
+}
+
+/* BLACK SHADE AT BOTTOM */
+.img::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.8) 100%
+  );
+}
+  </style>
+</head>
+<body>
+  <section>
+    <div class="img-box">
+  <img src="./img/course_img/indore_office1.jpg" alt="">
+</div>
+  </section>
+
+<section class="office-section">
+  <h2>OUR OFFICES</h2>
+  <p class="subtitle">Expanding Across India with Strategic Office Locations</p>
+
+  <div class="cards">
+
+    <!-- Card 1 -->
+    <div class="card pink">
+        <i class="fa-solid fa-location-dot " style="color: #f228c9;" ></i>
+      <h3>Indore (Head) Office</h3>
+      <img src="./img/course_img/indore_office1.jpg" alt="">
+    
+      <h3><i class="fa-solid fa-location-dot " style="color: #f228c9;" ></i> Indore Head Office</h3>
+      <p>Office No. 421 Fourth Floor, Shagun Tower, Vijay Nagar, Indore</p>
+      <button>VIEW MAP</button>
+    
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card blue">
+           <i class="fa-solid fa-location-dot " style="color:rgb(75, 237, 242)" ></i>
+      <h3>Indore 2nd Office</h3>
+      
+      <img src="./img/course_img/Indore ( Head ) Office.png" alt="">
+      <h3>  <i class="fa-solid fa-location-dot " style="color:rgb(75, 237, 242)" ></i> Indore Branch Office</h3>
+      <p>In Front of Vishal Mega Mart, Vijay Nagar, Indore</p>
+      <button>VIEW MAP</button>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card yellow">
+           <i class="fa-solid fa-location-dot " style="color: #f4e812; " ></i>
+      <h3>Seoni Malwa Office</h3>
+      <img src="./img/course_img/seoni_malwa.jpg" alt="">
+       <h3>  <i class="fa-solid fa-location-dot " style="color: #f4e812; " ></i> Seoni Malwa Office</h3>
+      <p>Main Road, above SBI Bank, Seoni Malwa</p>
+      <button>VIEW MAP</button>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
