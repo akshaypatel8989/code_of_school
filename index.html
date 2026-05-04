@@ -4,10 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./header-footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./style.css">
-
+    
     <title>Code Of School - Best IT & Digital Marketing institute in indore</title>
    
     <meta name="description"
@@ -15,7 +12,8 @@
 
     <meta name="robots" content="index,follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Code of School" />
+     <meta name="author" content="Ritendra Gour">
+    <meta name="robots" content="index, follow">
     <meta name="keywords"
         content="About Code of School, Programming training institute in Indore, Digital Marketing institute Indore, Coding classes Indore, Learn Java Python MERN React WordPress, Code of School About Page" />
 
@@ -27,7 +25,7 @@
         content="Discover Code of School’s mission and vision. We train students in programming, full-stack development, digital marketing, and more with live mentorship & certifications." />
     <meta property="og:url" content="https://codeofschool.com/about-us" />
     <meta property="og:site_name" content="Code of School" />
-    <meta property="og:image" content="https://codeofschool.com/img/cos-white-logo.webp" />
+    <meta property="og:image" content="https://codeofschool.com/img/cos-white-logo2.png" />
     <meta property="og:image:alt"
         content="About Code of School — Best Programming & Digital Marketing Training Institute" />
 
@@ -42,8 +40,12 @@ development seekhna — Beginner friendly courses and tutorials.">
     <meta name="twitter:image" content="https://codeofschool.com/img/cos-white-logo2.webp">
 
     <link rel="icon" href="./img/cos-white-logo2.png" type="image/webp" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="./home_location.css" />
+    <link rel="stylesheet" href="./header-footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
     <!-- imtemport -->
      <meta itemprop="name" content="Code of School"/>
       <meta itemprop="description" content="Code of School, Indore – your gateway to a successful tech career. Master in-demand skills like Java, Python, MERN, React, DSA, WordPress, and Digital Marketing with expert mentors, live projects, and job-oriented training."/>
@@ -68,11 +70,45 @@ beginner-friendly courses available hain.",
   "publisher": { 
     "@type": "Organization", 
     "name": "Code Of School", 
-    "logo": "https://codeofschool.com/img/cos-white-logo.webp", 
+    "logo": "https://codeofschool.com/img/cos-white-logo2.png", 
     "url": "https://codeofschool.com/" 
   } 
 } 
 </script>
+<style>
+    .fs-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.fs-img-wrap {
+  width: 100%;
+  max-width: 500px;   /* control max size */
+}
+
+.fs-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain; /* prevents cut */
+  border-radius: 10px;
+}
+.fs-img-wrap img {
+  width: 100%;
+  /* height: 370px;       fixed height */
+  object-fit: contain; /* show full image */
+}
+@media (max-width: 768px) {
+  .fs-img-wrap {
+    max-width: 100%;
+  }
+
+  .fs-img-wrap img {
+    height: auto;
+  }
+}
+</style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
@@ -261,59 +297,163 @@ beginner-friendly courses available hain.",
 
 
         <!-- FOURTH-SECTION-HOME-PAGE -->
-        <section class="fourth-section">
-            <div class="fourth-section-content">
+       <!-- ══════════════════════════════════════════════════
+       SECTION 4 — MISSION / VISION / VALUES
+       (fully responsive — key focus area)
+  ══════════════════════════════════════════════════ -->
+ <section class="fs">
+  <div class="fs-inner">
 
-                <div class="fourth-section-part-three">
-                    <p id="fourth-section-part-three-paraone">Featured Sections</p>
-                    <h1 id="fourth-section-part-three-head">We don't just teach skills - we build careers.</h1>
-                    <p id="fourth-section-part-three-paratwo">At Code of School, we combine expert mentorship, hands-on
-                        projects, and industry-relevant training to empower learners. Our programs are designed not just
-                        to teach, but to prepare students for real-world success and long-term career growth in IT and
-                        digital marketing.</p>
-                </div>
+    <!-- TOP HEADER -->
+    <div class="fs-header">
+      <div class="fs-eyebrow">
+        <span class="fs-eyebrow-dot"></span>
+        Why Code of School
+      </div>
+      <h1>We don't just teach skills —<br><em>we build careers.</em></h1>
+      <p>
+        Expert mentorship, hands-on projects, and industry-relevant training designed
+        to prepare you for real-world success and long-term career growth in IT
+        and digital marketing.
+      </p>
+      <div class="fs-divider"></div>
+    </div>
 
-                <div class="fourth-section-part">
+    <!-- ROW 1 — Mission & Vision (image left, text right) -->
+    <div class="fs-row">
 
-                    <div class="fourth-section-content-img">
-                        <!-- <h4 class="fourth-section-headingone dbm">Our Mission & Vision</h4> -->
+      <div class="fs-img">
+        <div class="fs-img-wrap">
+          <img src="./img/stu/chat.png" alt="Students learning at Code of School">
+        </div>
+        <div class="fs-badge">
+          <div class="fs-badge-icon">
+            <i class="fa-solid fa-rocket" style="font-size:15px"></i>
+          </div>
+          <div class="fs-badge-text">
+            <strong>20,000+ students</strong>
+            <span>launched their tech careers</span>
+          </div>
+        </div>
+      </div>
 
-                        <img src="./img/about_2.jpg">
-                    </div>
-                    <div class="fourth-section-all">
-                        <!-- <h4 class="fourth-section-headingone dnm">Our Mission & Vision</h4> -->
-                        <h1 class="fourth-section-headingtwo">Our Mission</h1>
-                        <p class="fourth-section-para">To empower learners with industry-ready IT and digital marketing
-                            skills through practical training, expert mentorship, and real-world projects that drive
-                            career success.</p>
-                            
-                        <h1 class="fourth-section-headingtwo">Our Vision</h1>
-                        <p class="fourth-section-para">To become a leading training institute where aspiring
-                            professionals transform their skills into thriving careers and make an impact in the digital
-                            world.</p>
-                       <a href="./placement.html"> <button class="fourth-section-btn">Learn More</button></a>
-                    </div>
+      <div class="fs-text">
+        <div class="fs-label">
+          <span class="fs-label-line"></span>
+          Mission &amp; Vision
+        </div>
+        <h2>Turning ambition into <span>achievement</span></h2>
+        <p>
+          Our mission is to equip every learner with job-ready IT and digital
+          marketing skills through practical training, expert mentorship, and
+          real-world projects. Our vision is a future where every student from
+          any background can build a thriving career in tech.
+        </p>
+        <ul class="fs-list">
+          <li>
+            <span class="fs-check">
+              <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+            </span>
+            Industry-aligned curriculum updated every quarter
+          </li>
+          <li>
+            <span class="fs-check">
+              <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+            </span>
+            Live projects with real client briefs, not mock exercises
+          </li>
+          <li>
+            <span class="fs-check">
+              <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+            </span>
+            One-on-one mentorship from working industry professionals
+          </li>
+          <li>
+            <span class="fs-check">
+              <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+            </span>
+            Placement support from day one, not just at graduation
+          </li>
+        </ul>
+        <a href="./placement.html">
+          <button class="fs-btn">
+            See our placements
+            <svg viewBox="0 0 16 16"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg>
+          </button>
+        </a>
+      </div>
 
-                </div>
+    </div>
 
-                <div class="fourth-section-part-two">
+    <!-- ROW 2 — Values (image right, text left) -->
+    <div class="fs-row rev">
 
-                    <div class="fourth-section-all">
-                        <!-- <h4 class="fourth-section-headingone">Future through Values</h4> -->
-                        <h1 class="fourth-section-headingtwo">Our Values</h1>
-                        <p class="fourth-section-para">At Code of School, we value practical learning, excellence, and
-                            innovation. We are committed to providing hands-on training, expert mentorship, and
-                            industry-relevant skills, all while fostering integrity and guiding students toward thriving
-                            careers in IT and digital marketing.</p>
-                        <a href="./about-us.html"><button class="fourth-section-btn">Learn More</button></a>
-                    </div>
+      <div class="fs-img">
+        <div class="fs-img-wrap">
+          <img src="./img/stu/our_values.png" alt="Code of School values in practice">
+        </div>
+        <div class="fs-badge">
+          <div class="fs-badge-icon" style="background:rgba(249,115,22,0.18);color:#fb923c">
+            <i class="fa-solid fa-certificate" style="font-size:15px"></i>
+          </div>
+          <div class="fs-badge-text">
+            <strong>ISO Certified</strong>
+            <span>institute &amp; curriculum</span>
+          </div>
+        </div>
+      </div>
 
-                    <div class="fourth-section-content-img-two"><img src="./img/about_3.jpg"></div>
+      <div class="fs-text">
+        <div class="fs-label" style="color:#f97316">
+          <span class="fs-label-line" style="background:#f97316"></span>
+          Our Values
+        </div>
+        <h2>Excellence, integrity,<br><span>and real impact</span></h2>
+        <p>
+          At Code of School we believe great training goes beyond textbooks.
+          We foster a culture of curiosity, collaboration, and continuous growth —
+          helping every student not just learn, but truly excel in a competitive
+          digital world.
+        </p>
+        <ul class="fs-list">
+          <li>
+            <span class="fs-check" style="background:rgba(249,115,22,0.18)">
+              <svg viewBox="0 0 12 12" style="stroke:#fb923c"><polyline points="2,6 5,9 10,3"/></svg>
+            </span>
+            Practical-first approach — build before you graduate
+          </li>
+          <li>
+            <span class="fs-check" style="background:rgba(249,115,22,0.18)">
+              <svg viewBox="0 0 12 12" style="stroke:#fb923c"><polyline points="2,6 5,9 10,3"/></svg>
+            </span>
+            Transparency in fees, schedules, and outcomes
+          </li>
+          <li>
+            <span class="fs-check" style="background:rgba(249,115,22,0.18)">
+              <svg viewBox="0 0 12 12" style="stroke:#fb923c"><polyline points="2,6 5,9 10,3"/></svg>
+            </span>
+            Inclusive classrooms — beginners welcome, no gatekeeping
+          </li>
+          <li>
+            <span class="fs-check" style="background:rgba(249,115,22,0.18)">
+              <svg viewBox="0 0 12 12" style="stroke:#fb923c"><polyline points="2,6 5,9 10,3"/></svg>
+            </span>
+            Lifetime alumni community and continued career support
+          </li>
+        </ul>
+        <a href="./about-us.html">
+          <button class="fs-btn orange">
+            Learn about us
+            <svg viewBox="0 0 16 16"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg>
+          </button>
+        </a>
+      </div>
 
-                </div>
+    </div>
 
-            </div>
-        </section>
+  </div>
+</section>
+        
         <!-- <section class="location">
 
 
@@ -337,7 +477,7 @@ beginner-friendly courses available hain.",
                         <span class="lbl-txt">Indore 1st Office</span>
                     </div>
 
-                    <img class="photo" src="./img/course_img/indore_office1.jpg" alt="Indore Head Office"
+                    <img class="photo" src="./img/Office(1).png" alt="Indore Head Office"
                         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
                     <div class="placeholder" style="display:none">🏢</div>
                     <div class="card-body">
@@ -355,42 +495,17 @@ beginner-friendly courses available hain.",
                             target="_blank" rel="noopener">VIEW MAP</a>
                     </div>
                 </div>
-
-                <!-- CARD 2 — INDORE 2ND OFFICE (Cyan) -->
-                <div class="card c-cyan">
-                    <div class="card-lbl">
-                        <span class="lbl-pin"><i class="fa-solid fa-location-dot "
-                                style="color:rgb(75, 237, 242)"></i></span>
-                        <span class="lbl-txt">Indore's 2nd Office</span>
-                    </div>
-                    <img class="photo" src="./img/course_img/indore_office2.jpg" alt="Indore 2nd Office"
-                        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-                    <div class="placeholder" style="display:none">🏙️</div>
-                    <div class="card-body">
-                        <div class="o-title">
-                            <span class="body-pin"><i class="fa-solid fa-location-dot "
-                                    style="color:rgb(75, 237, 242)"></i></span>
-                            <span class="title-txt">Indore Office</span>
-                        </div>
-                        <p class="o-addr">
-                            In Front of Vishal Mega Mart, SH 20 H I G,<br>
-                            Bhagat Singh Paris, Vijay Nagar, Indore
-                        </p>
-                        <a class="map-btn"
-                            href="https://www.google.com/maps/place/Marix+Global/@22.7528531,75.8955007,3a,75y,24.9h,90t/data=!3m7!1e1!3m5!1sjQMXFutvMj9VzihTmDo7Hg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DjQMXFutvMj9VzihTmDo7Hg%26yaw%3D24.90182!7i16384!8i8192!4m11!1m2!2m1!1s-+SH+20+H+I+G+BHAGAT+SINGH+PARIS,+VIJAY+NAGAR,+Indore!3m7!1s0x396303690f494f01:0x19965ed39cf0acf4!8m2!3d22.7528828!4d75.8955053!10e5!15sCjUtIFNIIDIwIEggSSBHIEJIQUdBVCBTSU5HSCBQQVJJUywgVklKQVkgTkFHQVIsIEluZG9yZVoxIi9zaCAyMCBoaWcgYmhhZ2F0IHNpbmdoIHBhcmlzIHZpamF5IG5hZ2FyIGluZG9yZZIBGmludGVybmV0X21hcmtldGluZ19zZXJ2aWNlmgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIwMU5FMURNVU5WUjJ4T1pXdDNlVmRyVGt0YWJYZzJVM3BvZVZsWFl4QULgAQD6AQUIhgIQNg!16s%2Fg%2F11m_2nyxvy?entry"
-                            target="_blank" rel="noopener">VIEW MAP</a>
-                    </div>
-                </div>
-
-                <!-- CARD 3 — SEONI MALWA OFFICE (Gold) -->
+               
+                  <!-- CARD 2 — SEONI MALWA OFFICE (Gold) -->
+               
                 <div class="card c-gold">
                     <div class="card-lbl">
                         <span class="lbl-pin"><i class="fa-solid fa-location-dot " style="color: #f4d612; "></i></span>
-                        <span class="lbl-txt">Seoni Malwa 3th Office</span>
+                        <span class="lbl-txt">Seoni Malwa 2nd Office</span>
                     </div>
                     <!-- Add your photo: <img class="photo" src="./img/seoni-malwa.jpg" alt="Seoni Malwa Office"/> -->
 
-                    <div class="placeholder"> <img class="photo" src="./img/course_img/seoni_malwa.jpg"
+                    <div class="placeholder"> <img class="photo" src="./img/Office(2).png"
                             alt="Indore 2nd Office"
                             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
 
@@ -410,6 +525,35 @@ beginner-friendly courses available hain.",
                             target="_blank" rel="noopener">VIEW MAP</a>
                     </div>
                 </div>
+           
+                       <!-- CARD 3 — INDORE 2ND OFFICE (Cyan) -->
+                <div class="card c-cyan">
+                    <div class="card-lbl">
+                        <span class="lbl-pin"><i class="fa-solid fa-location-dot "
+                                style="color:rgb(75, 237, 242)"></i></span>
+                        <span class="lbl-txt">Indore's 3th Office</span>
+                    </div>
+                    <img class="photo" src="./img/Office(3).png" alt="Indore 2nd Office"
+                        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+                    <div class="placeholder" style="display:none">🏙️</div>
+                    <div class="card-body">
+                        <div class="o-title">
+                            <span class="body-pin"><i class="fa-solid fa-location-dot "
+                                    style="color:rgb(75, 237, 242)"></i></span>
+                            <span class="title-txt">Indore Office</span>
+                        </div>
+                        <p class="o-addr">
+                            In Front of Vishal Mega Mart, SH 20 H I G,<br>
+                            Bhagat Singh Paris, Vijay Nagar, Indore
+                        </p>
+                        <a class="map-btn"
+                            href="https://www.google.com/maps/place/Marix+Global/@22.7528531,75.8955007,3a,75y,24.9h,90t/data=!3m7!1e1!3m5!1sjQMXFutvMj9VzihTmDo7Hg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DjQMXFutvMj9VzihTmDo7Hg%26yaw%3D24.90182!7i16384!8i8192!4m11!1m2!2m1!1s-+SH+20+H+I+G+BHAGAT+SINGH+PARIS,+VIJAY+NAGAR,+Indore!3m7!1s0x396303690f494f01:0x19965ed39cf0acf4!8m2!3d22.7528828!4d75.8955053!10e5!15sCjUtIFNIIDIwIEggSSBHIEJIQUdBVCBTSU5HSCBQQVJJUywgVklKQVkgTkFHQVIsIEluZG9yZVoxIi9zaCAyMCBoaWcgYmhhZ2F0IHNpbmdoIHBhcmlzIHZpamF5IG5hZ2FyIGluZG9yZZIBGmludGVybmV0X21hcmtldGluZ19zZXJ2aWNlmgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIwMU5FMURNVU5WUjJ4T1pXdDNlVmRyVGt0YWJYZzJVM3BvZVZsWFl4QULgAQD6AQUIhgIQNg!16s%2Fg%2F11m_2nyxvy?entry"
+                            target="_blank" rel="noopener">VIEW MAP</a>
+                    </div>
+                </div>
+
+             
+                
 
             </div><!-- /grid -->
 
@@ -439,18 +583,18 @@ beginner-friendly courses available hain.",
                 </div>
 
 
-                <div class="footer-log">
+                 <div class="footer-log">
                     <div class="logo-box">
-                        <img src="/img/course_img/cmmi-removebg-preview-3.png" alt="CMMI">
+                        <img src="./img/course_img/cmmi-removebg-preview-3.png" alt="CMMI">
                     </div>
                     <div class="logo-box">
-                        <img src="/img/course_img/iso-final-removebg-preview-1.png" alt="ISO">
+                        <img src="./img/course_img/iso-final-removebg-preview-1.png" alt="ISO">
                     </div>
                     <div class="logo-box">
-                        <img src="/img/course_img/iso-removebg-preview-1.png" alt="ISO">
+                        <img src="./img/course_img/iso-removebg-preview-1.png" alt="ISO">
                     </div>
                     <div class="logo-box">
-                        <img src="/img/course_img/msme-removebg-preview.png" alt="MSME">
+                        <img src="./img/course_img/msme-removebg-preview.png" alt="MSME">
                     </div>
                 </div>
             </div>
@@ -520,7 +664,7 @@ beginner-friendly courses available hain.",
                     <div class="footer-contact-location">
                         <a href="https://www.google.com/maps/place/SBI+Branch+Seoni+Malwa/@22.456887,77.4745115,17z/data=!3m1!4b1!4m6!3m5!1s0x397d951da2d23db9:0xb53e632f76801d6f!8m2!3d22.456887!4d77.4745115!16s%2Fg%2F11pv83p_36?entry=ttu&g_ep=EgoyMDI2MDMxNS4wIKXMDSoASAFQAw%3D%3D"
                             target="_blank">
-                            <b>Second Branch (Indore):</b> Main Road, above SBI Main Branch,
+                            <b>Second Branch (Seoni Malwa):</b> Main Road, above SBI Main Branch,
                             near Geeta Talkies, Seoni Malwa. MP 461223
                         </a>
                     </div>
@@ -536,8 +680,7 @@ beginner-friendly courses available hain.",
                     <div class="contact-no">
                         <ul class="phone-list">
 
-                            <li><a href="tel:+919977085405">+91 99770-85405 ,</a></li>
-
+                               <li><a href="tel:6263945418">+91 6263-945-418 ,</a></li>
                             <li><a href="tel:9977723584">+91 9977-723-584 </a></li>
                         </ul>
                     </div>
@@ -556,7 +699,7 @@ beginner-friendly courses available hain.",
                     <div class="footer-contact-location">
                         <a href="https://www.google.com/maps/place/Marix+Global/@22.7528531,75.8955007,3a,75y,24.9h,90t/data=!3m7!1e1!3m5!1sjQMXFutvMj9VzihTmDo7Hg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DjQMXFutvMj9VzihTmDo7Hg%26yaw%3D24.90182!7i16384!8i8192!4m11!1m2!2m1!1s-+SH+20+H+I+G+BHAGAT+SINGH+PARIS,+VIJAY+NAGAR,+Indore!3m7!1s0x396303690f494f01:0x19965ed39cf0acf4!8m2!3d22.7528828!4d75.8955053!10e5!15sCjUtIFNIIDIwIEggSSBHIEJIQUdBVCBTSU5HSCBQQVJJUywgVklKQVkgTkFHQVIsIEluZG9yZVoxIi9zaCAyMCBoaWcgYmhhZ2F0IHNpbmdoIHBhcmlzIHZpamF5IG5hZ2FyIGluZG9yZZIBGmludGVybmV0X21hcmtldGluZ19zZXJ2aWNlmgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIwMU5FMURNVU5WUjJ4T1pXdDNlVmRyVGt0YWJYZzJVM3BvZVZsWFl4QULgAQD6AQUIhgIQNg!16s%2Fg%2F11m_2nyxvy?entry=ttu&g_ep=EgoyMDI2MDQwNS4wIKXMDSoASAFQAw%3D%3D"
                             target="_blank">
-                            <b>Third Branch (Seoni Malwa):</b>In Front of Vishal Mega Mart , SH 20 H I G, Bhagat Singh
+                            <b>Third Branch (Indore):</b>In Front of Vishal Mega Mart , SH 20 H I G, Bhagat Singh
                             Paris, Vijay Nagar, Indore, MP 452010
 
                         </a>
@@ -574,7 +717,8 @@ beginner-friendly courses available hain.",
                     </div>
                     <div class="contact-no">
                         <ul class="phone-list">
-                            <li><a href="tel:6263945418">+91 6263-945-418 ,</a></li>
+                          
+                            <li><a href="tel:+919977085405">+91 99770-85405 ,</a></li>
                             <li><a href="tel:9977723584">+91 9977-723-584 </a></li>
                         </ul>
                     </div>

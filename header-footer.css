@@ -1009,7 +1009,7 @@ footer::after {
 
 /* Location text */
 .footer-contact-location a {
-  font-size: 12.5px;
+  font-size: 13.5px;
   color: var(--ft-muted);
   line-height: 1.75;
   transition: color .18s;
@@ -1022,11 +1022,11 @@ footer::after {
 /* Phone / mail / time */
 .contact-no ul,
 .mail-add ul,
-.office ul { list-style: none; padding: 0; margin: 8px 0px; }
+.office ul { list-style: none; padding: 0; margin: 6px 0px; }
 
 .contact-no ul li a,
 .mail-add ul li a {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--ft-muted);
   display: block;
   padding: .1rem 0;
@@ -1070,7 +1070,7 @@ footer::after {
 }
 .footer-coures p,
 .footer-coures a p {
-  font-size: 12.5px;
+  font-size: 13.5px;
   color: var(--ft-muted);
   line-height: 1.7;
   margin: .25rem 0;
@@ -1078,8 +1078,10 @@ footer::after {
 }
 .footer-coures a:hover p { color: #f69415; }
 .coures-location{
+   
     max-width: 1320px;
     margin: 0 auto;
+    
     padding: 1.5rem 3rem;
 }
 
@@ -1092,7 +1094,10 @@ footer::after {
   margin-bottom: .6rem;
 }
 .coures-location p {
-  font-size: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  font-size: 13.5px;
   color:white;
   line-height: 1.9;
   word-spacing: 2px;
@@ -1111,6 +1116,14 @@ footer::after {
     /* max-width: 1320px;
     margin: 0 auto; */
     padding: 1.5rem 1rem;
+}
+.footer-dis p {
+  font-size: 14px;
+  padding: 10px;
+  line-height: 1.85;
+  color: var(--ft-muted);
+  max-width: 690px;
+
 }
 }
 
@@ -1137,6 +1150,7 @@ footer::after {
 }
 .footer-parttwo a {
   color:white;
+  font-size: 13.5px;
   font-weight: 600;
   transition: color .18s;
 }
@@ -1161,7 +1175,7 @@ footer::after {
   .footer-offer { grid-template-columns: 1fr; gap: 1rem; }
 }
 @media (max-width: 768px) {
-  .footer-partone { grid-template-columns: 1fr; padding: 2.5rem 1.25rem 2rem; gap: 2rem; }
+  .footer-partone { grid-template-columns: 1fr; padding: 2.5rem 1rem 2rem; gap: 2rem; }
   .footer-partone > div { padding: 0 !important; }
   .footer-partone > div::before { display: none !important; }
   .footer-offer { padding: 1.25rem; }
@@ -1215,19 +1229,21 @@ footer::after {
  
           /* -------footer---------- */
  .footer-courses {
-            display: flex;
-            justify-content: space-between;
+            /* display: flex;
+            justify-content: space-between; */
             gap: 20px;
             flex-wrap: wrap;
             /* responsive */
         }
 
-        .footer-left,
-        .footer-right {
+        .footer-left {
             flex: 1;
             display: flex;
             flex-direction: column;
             gap: 10px;
+        }
+        .footer-right ,hr{
+            display: none;
         }
 
         .footer-courses a {
@@ -1240,6 +1256,7 @@ footer::after {
         .footer-right h4{
             color: #f69415;
             font-size: 16px;
+            font-weight: 600;
             text-transform: uppercase;
         }
 
